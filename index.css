@@ -1,0 +1,201 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 10pt Arial, Helvetica, sans-serif;
+    margin-bottom: 5%;
+    /* Шрифт на веб-странице */
+    /* Цвет фона */
+}
+
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.gradient-button1 {
+	float: right;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.round {
+    border-radius: 100px;
+    /* Радиус скругления */
+    box-shadow: 0 0 0 3px black, 0 0 13px #333;
+    /* Параметры теней */
+}
+
+#logo_image {
+    width: 70%;
+    height: 80%;
+    border: solid rgb(68, 93, 97);
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 1.1em;
+    /* Размер шрифта */
+    color: #752641;
+    /* Цвет текста */
+    margin-bottom: 0;
+    /* Отступ снизу */
+}
+
+header {
+    display: flex;
+    background: #3b3b3b;
+    /* Цвет фона */
+    font-size: 40pt;
+    /* Размер текста */
+    font-weight: bold;
+    /* Жирное начертание */
+    color: #ffffff;
+    /* Цвет текста */
+    padding: 5px;
+    /* Отступы вокруг текста */
+}
+
+#head_text {
+    text-align: center;
+    margin: auto;
+}
+
+.menu {
+    color: #000000;
+}
+
+nav {
+    background: #ededed;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #ededed;
+    color: white;
+}
+
+nav ul {
+    margin: auto;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 20pt;
+    display: inline;
+}
+
+#container {
+    background: #f0f0f0;
+    clear: both;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#container img {
+    width: 30%;
+    border: solid black;
+    margin-right: 20px;
+}
+
+#content {
+    padding: 10px;
+    /* Поля вокруг текста */
+    border-bottom: 1px solid #183533;
+    border-bottom-style: dotted;
+    /* Линия справа */
+    background: #fff;
+    /* Цвет фона левой колонки */
+}
+
+#content p {
+    margin-top: 0.3em/* Отступ сверху */
+}
+
+#content li {
+    padding: 10px;
+    display: inline;
+}
+
+.news {
+    width: 100%;
+    padding-right: 1%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#current_news {
+    display: flex;
+}
+
+.anonce {
+    padding-top: 1%;
+}
+
+.input-container {
+    width: 450px;
+    background-color: rgba(24, 33, 52, 0.7);
+    margin: 100px auto 0 auto;
+    text-align: center;
+    box-shadow: 0 -5px 0 #3adbfd;
+    padding-bottom: 20px;
+}
+
+.admin-button {}
+
+time {
+    float: right;
+    margin-right: 50px;
+}
+
+footer {
+    position: fixed;
+    background: #7f7f80;
+    color: #000000;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
