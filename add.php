@@ -1,10 +1,11 @@
 <?php
+	session_start();
     $title = "Добавить новость";
-    require("header.php");
-if ($_SESSION['user_id'] == NULL) : ?>
-    <p>Нужно залогиниться.</p>
-<?php else : ?>
+    require("admin_header.php");
+    	if(isset($_SESSION['login']))
+	{ ?>
     <form action="create.php" method="POST">
+	    <div id="container1">
         <p>Введите заголовок:<br>
             <input type="text" name="title" />
         </p>
@@ -15,9 +16,12 @@ if ($_SESSION['user_id'] == NULL) : ?>
         <p>Введите имя картинки: <br>
             <input type="text" name="image" />
         </p>
-        <input name="submitChanges" type="submit" value="Добавить" />
+        <input class="gradient-button" name="submitChanges" type="submit" value="Добавить" />
+        </div>
     </form>
 <?php
     require("footer.php");
-    endif;
+    }
+    else
+    echo "Нужно авторизоваться";
 ?>

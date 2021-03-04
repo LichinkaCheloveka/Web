@@ -16,13 +16,16 @@
             {
                 $_SESSION['user_id'] = $_POST['login'];
                 echo "Авторизация прошла успешно";
+                $_SESSION['login']=1;
                 header ('Location: admin_index.php'); 
                 exit();
             }
             else
-                echo "неправильный пароль";
+            header ('Location: login.php'); 
+            echo "Неправильный пароль";
         }
         else
-            echo "неправильный логин";
+        header ('Location: login.php');
+        echo "Неправильный логин";
     }
 ?>

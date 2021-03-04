@@ -1,5 +1,5 @@
 <?php
-require ("header.php");
+require ("admin_header.php");
 if (isset($_POST['submitChanges']))
 {
  $title = $_POST['title'];
