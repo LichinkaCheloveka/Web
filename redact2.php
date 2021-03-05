@@ -3,6 +3,8 @@ session_start();
 $mysqli = new mysqli("localhost", "root", "", "News");
 if ($mysqli->connect_errno)
     echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    if(isset($_SESSION['login']))
+	{
 if (isset($_POST['submitChanges']))
 {
     $id = $_POST['id'];
@@ -21,4 +23,8 @@ if (isset($_POST['submitChanges']))
     $stmt->close();
     header ('Location: admin_index.php');
 }
+	}
+	else
+	echo "Нужно авторизоваться";
 ?>
+
