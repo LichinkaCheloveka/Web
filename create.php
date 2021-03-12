@@ -1,35 +1,33 @@
 <?php
-require ("admin_header.php");
-$uploaddir = '/Users/pavelparaev/Downloads/Images/';
-$uploadfile = $uploaddir.basename($_FILES['image']['name']);
-if(isset($_SESSION['login']))
-	{
-if (isset($_POST['submitChanges']))
+date_default_timezone_set('UTC');
+$title = "Добавить новость";
+require("header.php");
+if (isset($_SESSION['user_id']))
 {
- $date = $_POST['date'];
- $title = $_POST['title'];
- $announcement = $_POST['announce'];
- $text_news = $_POST['text'];
- $image = $uploadfile;
- //print($_FILES['image']['tmp_name']);
-move_uploaded_file($_FILES['image']['tmp_name'], $uploaddir);
-//if (move_uploaded_file($_FILES['image']['tmp_name'], $uploaddir)) { 
-//   echo "Файл корректен и был успешно загружен.\n";
-//    var_dump($_FILES);
-//} else {
-//    echo "Error!\n";
-//   var_dump($_FILES);
-//}
- if (!($stmt = $mysqli->prepare("INSERT INTO Tablica(date, title, announce, text, image) VALUES (?,?,?,?,?)")))
- 	echo "Не удалось подготовить запрос: (" . $mysqli->errno . ") " . $mysqli->error;
- if (!$stmt->bind_param("sssss",$date, $title, $announcement, $text_news, $image))
- 	echo "Не удалось привязать параметры: (" . $stmt->errno . ") " . $stmt->error;
- if (!$stmt->execute())
- 	echo "Не удалось выполнить запрос: (" . $stmt->errno . ") " . $stmt->error;
- $stmt->close();
- header ('Location: admin_index.php');
+if ($_SESSION['user_id'] == 'admin') { ?>
+    <form action="create_exec.php" method="POST" enctype="multipart/form-data">
+        <div id="container1">
+            <p>Введите заголовок:<br>
+                <input type="text" name="title">
+            </p>
+            <p>Введите анонс: <br>
+                <textarea rows="5" cols="80" name="announce"></textarea><br><br>
+            <p>Введите текст: <br>
+                <textarea rows="15" cols="80" name="text"></textarea><br><br>
+            <p>Введите Дату: <br>
+                <input type="date" name="date" value="2020-03-05" min="1971-01-01" max="2050-12-31">
+            </p><br>
+            <p>Добавьте картинку<br>
+                <input type="hidden" value="30000">
+                <input type="file" name="image">
+            </p>
+
+            <input class="gradient-button" name="submitChanges" type="submit" value="Добавить">
+        </div>
+    </form>
+<?php
+    require("footer.php");
+} else
+    echo "Нужно авторизоваться";
 }
-    }
-    else
-    	echo "Нужно авторизоваться";
 ?>

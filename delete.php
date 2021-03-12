@@ -1,7 +1,9 @@
 <?php
 session_start();
-	if(isset($_SESSION['login']))
-	{
+if (!$_SESSION['user_id'] == 'admin')
+    echo "нужно войти";
+else
+    {
         $mysqli = new mysqli("localhost", "root", "", "News");
         if ($mysqli->connect_errno)
             echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -10,6 +12,4 @@ session_start();
         $result = mysqli_query($mysqli, $query);
         header ('Location: admin_index.php');
     }
-    else
-    echo "Нужно авторизоваться";
 ?>
