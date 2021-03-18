@@ -1,8 +1,7 @@
 <?php
-$title = "Редактировать новость";
-require('header.php');
-if (isset($_SESSION['user_id'])) {
-  if ($_SESSION['user_id'] == 'admin') {
+session_start();
+require("connect_db.php");
+$mysqli = connect_db();
 ?>
     <?php $id = (int)$_GET["page"];
     $res = $mysqli->query("SELECT * FROM Tablica WHERE id = $id");
@@ -24,8 +23,3 @@ if (isset($_SESSION['user_id'])) {
         </form>
       </div>
     </div>
-<?php
-  } else
-      echo "Нужно авторизоваться";
-}
-?>
