@@ -24,6 +24,7 @@ if (isset($_SESSION['user_id'])) {
 			if (!$stmt->execute())
 				echo "Не удалось выполнить запрос: (" . $stmt->errno . ") " . $stmt->error;
 			$stmt->close();
+			//var_dump($POST);
 			header('Location: admin_index.php');
 		}
 	} else

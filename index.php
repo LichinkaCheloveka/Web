@@ -39,19 +39,19 @@
     
 
 <?php
-$res = $mysqli->query("SELECT * FROM Tablica ORDER BY id ASC");
+$res = $mysqli->query("SELECT * FROM Tablica ORDER BY id DESC");
     while ($row = $res->fetch_assoc()) { 
 ?>
-    <section class="medium-gap standard-home">
+    <section class="large-gap about-me about-version-two">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="standard-posts">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="standard-post">
                     <div class="post-image">
-                      <a href="#"><img src="Images/<?=$row['image']?>" alt=""></a>
+                      <a href="<?= "news.php?page=" . $row['id']; ?>"><img src="Images/<?=$row['image']?>" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="meta-category">
@@ -100,27 +100,27 @@ $res = $mysqli->query("SELECT * FROM Tablica ORDER BY id ASC");
             <div class="instagram-account">
               <div class="widget-content">
                 <div class="widget-header">
-                  <h4><a href="#">@AboutUs</a></h4>
+                  <h4><a href="#">@about</a></h4>
                 </div>
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about1.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about2.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about3.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about4.jpg" alt="">
                     </div>
                   </div>
                 </div>

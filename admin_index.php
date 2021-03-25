@@ -5,8 +5,7 @@
 	if ($_SESSION['user_id'] == 'admin') 
 	{
 ?>
-
-
+	
 	<div class="main-banner">
       <div class="container expanded">
         <div class="owl-big-banner owl-carousel">
@@ -41,12 +40,12 @@
 <section class="medium-gap standard-home">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="standard-posts">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="standard-post">
-				  	<a class="" href="<?= "create.php" ?>">Добавить новость</a>
+				  	<a href="<?= "create.php" ?>">Добавить новость</a>
             	  </div>
           		</div>
               </div>
@@ -57,25 +56,25 @@
 </section>
 
 <?php
-$res = $mysqli->query("SELECT * FROM Tablica ORDER BY id ASC");
+$res = $mysqli->query("SELECT * FROM Tablica ORDER BY id DESC");
     while ($row = $res->fetch_assoc()) { 
 ?>
-    <section class="medium-gap standard-home">
+    <section class="large-gap about-me about-version-two">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="standard-posts">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="standard-post">
                     <div class="post-image">
-                      <a href="#"><img src="Images/<?=$row['image']?>" alt=""></a>
+                      <a href="<?= "news.php?page=" . $row['id']; ?>"><img src="Images/<?=$row['image']?>" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="meta-category">
                         <span>News</span>
                       </div>
-                      <a href="#"><h4><em><?= $row['title']?></em></h4></a>
+                      <a href="<?= "news.php?page=" . $row['id']; ?>"><h4><em><?= $row['title']?></em></h4></a>
                       <ul class="post-info">
                         <li><a href="#"><?= $row['date']?></a></li>
                         <li><a href="#">Admin</a></li>
@@ -124,22 +123,22 @@ $res = $mysqli->query("SELECT * FROM Tablica ORDER BY id ASC");
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about1.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about2.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about3.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about4.jpg" alt="">
                     </div>
                   </div>
                 </div>
@@ -176,9 +175,6 @@ $res = $mysqli->query("SELECT * FROM Tablica ORDER BY id ASC");
 </html>
 <?php
 } else echo("Please Log in");
-    ?> 
-	
-    <?php
 }
 ?>
 

@@ -70,27 +70,27 @@ require("header.php");
             <div class="instagram-account">
               <div class="widget-content">
                 <div class="widget-header">
-                  <h4><a href="#">@shareenBlog</a></h4>
+                  <h4><a href="#">@about</a></h4>
                 </div>
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about1.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about2.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about3.jpg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="instagram-item">
-                      <img src="http://placehold.it/255x220" alt="">
+                      <img src="Images/about4.jpg" alt="">
                     </div>
                   </div>
                 </div>

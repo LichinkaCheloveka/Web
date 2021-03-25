@@ -55,7 +55,7 @@ if (isset($_SESSION['user_id']))
           </div>
           <div class="col-lg-4 align-self-center">
             <div class="logo">
-              <a href="index.php"><img src="Images/logo.PNG" alt=""></a>
+              <a href="index.php"><img src="Images/logo.png" alt=""></a>
             </div>
           </div>
           <div class="col-lg-4 align-self-center">
